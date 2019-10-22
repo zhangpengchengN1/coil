@@ -8,6 +8,7 @@ coil.bitmappool
 coil.collection
 coil.decode
 coil.drawable
+coil.extension
 coil.fetch
 coil.map
 coil.network

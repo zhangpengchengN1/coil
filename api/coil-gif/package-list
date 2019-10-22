@@ -1,5 +1,7 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
-
+$dokka.location:coil.extension$repeatCount(coil.request.Parameters)coil.extension/coil.request.-parameters/repeat-count.md
+$dokka.location:coil.extension$repeatCount(coil.request.RequestBuilder(()), kotlin.Int)coil.extension/coil.request.-request-builder/repeat-count.md
 coil.decode
 coil.drawable
+coil.extension

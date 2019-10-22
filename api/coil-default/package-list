@@ -1,5 +1,6 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
+$dokka.location:coil.api$clear(android.widget.ImageView, coil.ImageLoader)coil.api/android.widget.-image-view/clear.md
 $dokka.location:coil.api$load(android.widget.ImageView, android.graphics.Bitmap, coil.ImageLoader, kotlin.Function1((coil.request.LoadRequestBuilder, kotlin.Unit)))coil.api/android.widget.-image-view/load.md
 $dokka.location:coil.api$load(android.widget.ImageView, android.graphics.drawable.Drawable, coil.ImageLoader, kotlin.Function1((coil.request.LoadRequestBuilder, kotlin.Unit)))coil.api/android.widget.-image-view/load.md
 $dokka.location:coil.api$load(android.widget.ImageView, android.net.Uri, coil.ImageLoader, kotlin.Function1((coil.request.LoadRequestBuilder, kotlin.Unit)))coil.api/android.widget.-image-view/load.md
@@ -10,3 +11,4 @@ $dokka.location:coil.api$load(android.widget.ImageView, okhttp3.HttpUrl, coil.Im
 $dokka.location:coil.api$loadAny(android.widget.ImageView, kotlin.Any, coil.ImageLoader, kotlin.Function1((coil.request.LoadRequestBuilder, kotlin.Unit)))coil.api/android.widget.-image-view/load-any.md
 coil
 coil.api
+coil.util
