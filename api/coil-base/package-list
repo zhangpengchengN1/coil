@@ -16,4 +16,5 @@ coil.request
 coil.size
 coil.target
 coil.transform
+coil.transition
 coil.util
