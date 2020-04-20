@@ -3,7 +3,6 @@ $dokka.linkExtension:md
 
 coil
 coil.annotation
-coil.api
 coil.bitmappool
 coil.collection
 coil.decode

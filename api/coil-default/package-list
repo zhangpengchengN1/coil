@@ -11,4 +11,3 @@ $dokka.location:coil.api$load(android.widget.ImageView, okhttp3.HttpUrl, coil.Im
 $dokka.location:coil.api$loadAny(android.widget.ImageView, kotlin.Any, coil.ImageLoader, kotlin.Function1((coil.request.LoadRequestBuilder, kotlin.Unit)))coil.api/android.widget.-image-view/load-any.md
 coil
 coil.api
-coil.util
