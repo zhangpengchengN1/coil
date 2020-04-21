@@ -29,7 +29,9 @@
         <span class=k>return</span> <span class=n>disposable</span>
     <span class=p>}</span>
 
-    <span class=k>override</span> <span class=n>suspend</span> <span class=k>fun</span> <span class=nf>execute</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>GetRequest</span><span class=p>)</span> <span class=p>=</span> <span class=n>drawable</span>
+    <span class=k>override</span> <span class=n>suspend</span> <span class=k>fun</span> <span class=nf>execute</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>GetRequest</span><span class=p>):</span> <span class=n>RequestResult</span> <span class=p>{</span>
+        <span class=k>return</span> <span class=n>SuccessResult</span><span class=p>(</span><span class=n>drawable</span><span class=p>,</span> <span class=n>DataSource</span><span class=p>.</span><span class=n>MEMORY_CACHE</span><span class=p>)</span>
+    <span class=p>}</span>
 
     <span class=k>override</span> <span class=k>fun</span> <span class=nf>invalidate</span><span class=p>(</span><span class=n>key</span><span class=p>:</span> <span class=n>String</span><span class=p>)</span> <span class=p>{}</span>
 
