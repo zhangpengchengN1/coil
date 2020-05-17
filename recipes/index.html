@@ -43,9 +43,10 @@
         <span class=c1>// Compute the palette on a background thread.</span>
         <span class=k>if</span> <span class=p>(</span><span class=n>result</span> <span class=k>is</span> <span class=n>SuccessResult</span><span class=p>)</span> <span class=p>{</span>
             <span class=k>val</span> <span class=py>bitmap</span> <span class=p>=</span> <span class=p>(</span><span class=n>result</span><span class=p>.</span><span class=n>drawable</span> <span class=k>as</span> <span class=n>BitmapDrawable</span><span class=p>).</span><span class=n>bitmap</span>
-            <span class=n>withContext</span><span class=p>(</span><span class=n>Dispatchers</span><span class=p>.</span><span class=n>IO</span><span class=p>)</span> <span class=p>{</span>
-                <span class=n>onGenerated</span><span class=p>(</span><span class=n>Palette</span><span class=p>.</span><span class=n>Builder</span><span class=p>(</span><span class=n>bitmap</span><span class=p>).</span><span class=n>generate</span><span class=p>())</span>
+            <span class=k>val</span> <span class=py>palette</span> <span class=p>=</span> <span class=n>withContext</span><span class=p>(</span><span class=n>Dispatchers</span><span class=p>.</span><span class=n>IO</span><span class=p>)</span> <span class=p>{</span>
+                <span class=n>Palette</span><span class=p>.</span><span class=n>Builder</span><span class=p>(</span><span class=n>bitmap</span><span class=p>).</span><span class=n>generate</span><span class=p>()</span>
             <span class=p>}</span>
+            <span class=n>onGenerated</span><span class=p>(</span><span class=n>palette</span><span class=p>)</span>
         <span class=p>}</span>
 
         <span class=n>delegateJob</span><span class=o>?.</span><span class=n>join</span><span class=p>()</span>
