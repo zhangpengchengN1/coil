@@ -52,7 +52,13 @@ allprojects {
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
-            freeCompilerArgs = listOf("-progressive", "-Xopt-in=kotlin.RequiresOptIn")
+            freeCompilerArgs += listOf(
+                "-progressive",
+                "-Xno-call-assertions",
+                "-Xno-param-assertions",
+                "-Xno-receiver-assertions",
+                "-Xopt-in=kotlin.RequiresOptIn"
+            )
             jvmTarget = "1.8"
         }
     }
