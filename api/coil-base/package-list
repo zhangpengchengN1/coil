@@ -3,13 +3,13 @@ $dokka.linkExtension:md
 
 coil
 coil.annotation
-coil.bitmappool
-coil.collection
+coil.bitmap
 coil.decode
 coil.drawable
-coil.extension
 coil.fetch
+coil.intercept
 coil.map
+coil.memory
 coil.network
 coil.request
 coil.size

@@ -1,9 +1,5 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
-$dokka.location:coil.extension$videoFrameMicros(coil.request.Parameters)coil.extension/coil.request.-parameters/video-frame-micros.md
-$dokka.location:coil.extension$videoFrameMicros(coil.request.RequestBuilder((coil.extension.videoFrameMicros.T)), kotlin.Long)coil.extension/coil.request.-request-builder/video-frame-micros.md
-$dokka.location:coil.extension$videoFrameMillis(coil.request.RequestBuilder((coil.extension.videoFrameMillis.T)), kotlin.Long)coil.extension/coil.request.-request-builder/video-frame-millis.md
-$dokka.location:coil.extension$videoFrameOption(coil.request.Parameters)coil.extension/coil.request.-parameters/video-frame-option.md
-$dokka.location:coil.extension$videoFrameOption(coil.request.RequestBuilder((coil.extension.videoFrameOption.T)), kotlin.Int)coil.extension/coil.request.-request-builder/video-frame-option.md
-coil.extension
+
 coil.fetch
+coil.request
