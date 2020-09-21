@@ -61,7 +61,6 @@
     <span class=p>})</span>
 
 <span class=c1>// Coil</span>
-<span class=k>val</span> <span class=py>imageLoader</span> <span class=p>=</span> <span class=n>Coil</span><span class=p>.</span><span class=n>imageLoader</span><span class=p>(</span><span class=n>context</span><span class=p>)</span>
 <span class=k>val</span> <span class=py>request</span> <span class=p>=</span> <span class=n>ImageRequest</span><span class=p>.</span><span class=n>Builder</span><span class=p>(</span><span class=n>context</span><span class=p>)</span>
     <span class=p>.</span><span class=k>data</span><span class=p>(</span><span class=n>url</span><span class=p>)</span>
     <span class=p>.</span><span class=n>target</span><span class=p>(</span>
@@ -76,7 +75,7 @@
         <span class=p>}</span>
     <span class=p>)</span>
     <span class=p>.</span><span class=n>build</span><span class=p>()</span>
-<span class=n>imageLoader</span><span class=p>.</span><span class=n>enqueue</span><span class=p>(</span><span class=n>request</span><span class=p>)</span>
+<span class=n>context</span><span class=p>.</span><span class=n>imageLoader</span><span class=p>.</span><span class=n>enqueue</span><span class=p>(</span><span class=n>request</span><span class=p>)</span>
 </code></pre></div> <h3 id=background-thread>Background Thread<a class=headerlink href=#background-thread title="Permanent link">&para;</a></h3> <div class=codehilite><pre><span></span><code><span class=c1>// Glide (blocks the current thread; must not be called from the main thread)</span>
 <span class=k>val</span> <span class=py>drawable</span> <span class=p>=</span> <span class=n>Glide</span><span class=p>.</span><span class=n>with</span><span class=p>(</span><span class=n>context</span><span class=p>)</span>
     <span class=p>.</span><span class=n>load</span><span class=p>(</span><span class=n>url</span><span class=p>)</span>
@@ -90,10 +89,9 @@
     <span class=p>.</span><span class=k>get</span><span class=p>()</span>
 
 <span class=c1>// Coil (suspends the current coroutine; non-blocking and thread safe)</span>
-<span class=k>val</span> <span class=py>imageLoader</span> <span class=p>=</span> <span class=n>Coil</span><span class=p>.</span><span class=n>imageLoader</span><span class=p>(</span><span class=n>context</span><span class=p>)</span>
 <span class=k>val</span> <span class=py>request</span> <span class=p>=</span> <span class=n>ImageRequest</span><span class=p>.</span><span class=n>Builder</span><span class=p>(</span><span class=n>context</span><span class=p>)</span>
     <span class=p>.</span><span class=k>data</span><span class=p>(</span><span class=n>url</span><span class=p>)</span>
     <span class=p>.</span><span class=n>size</span><span class=p>(</span><span class=n>width</span><span class=p>,</span> <span class=n>height</span><span class=p>)</span>
     <span class=p>.</span><span class=n>build</span><span class=p>()</span>
-<span class=k>val</span> <span class=py>drawable</span> <span class=p>=</span> <span class=n>imageLoader</span><span class=p>.</span><span class=n>execute</span><span class=p>(</span><span class=n>request</span><span class=p>).</span><span class=n>drawable</span>
+<span class=k>val</span> <span class=py>drawable</span> <span class=p>=</span> <span class=n>context</span><span class=p>.</span><span class=n>imageLoader</span><span class=p>.</span><span class=n>execute</span><span class=p>(</span><span class=n>request</span><span class=p>).</span><span class=n>drawable</span>
 </code></pre></div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid"> <a href=../getting_started/ title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Previous </span> Getting Started </span> </div> </a> <a href=../image_loaders/ title="Image Loaders" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel=next> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Next </span> Image Loaders </span> </div> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2020 Coil Contributors </div> powered by <a href=https://www.mkdocs.org target=_blank rel=noopener>MkDocs</a> and <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs</a> </div> <div class=md-footer-social> <link rel=stylesheet href=../assets/fonts/font-awesome.css> <a href=https://github.com/coil-kt/coil target=_blank rel=noopener title=github class="md-footer-social__link fa fa-github"></a> </div> </div> </div> </footer> </div> <script src=../assets/javascripts/application.c33a9706.js></script> <script>app.initialize({version:"1.1",url:{base:".."}})</script> </body> </html>
