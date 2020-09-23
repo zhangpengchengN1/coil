@@ -6,7 +6,7 @@
         <span class=n>add</span><span class=p>(</span><span class=n>GifDecoder</span><span class=p>())</span>
     <span class=p>}</span>
     <span class=p>.</span><span class=n>build</span><span class=p>()</span>
-</code></pre></div> <h2 id=interceptors>Interceptors<a class=headerlink href=#interceptors title="Permanent link">&para;</a></h2> <p>Interceptors allow you to observe, transform, short circuit, or retry requests to an [ImageLoader]'s image engine. For example, you can add a custom cache layer like so:</p> <div class=codehilite><pre><span></span><code><span class=k>class</span> <span class=nc>CustomCacheInterceptor</span><span class=p>(</span>
+</code></pre></div> <h2 id=interceptors>Interceptors<a class=headerlink href=#interceptors title="Permanent link">&para;</a></h2> <p>Interceptors allow you to observe, transform, short circuit, or retry requests to an <code>ImageLoader</code>'s image engine. For example, you can add a custom cache layer like so:</p> <div class=codehilite><pre><span></span><code><span class=k>class</span> <span class=nc>CustomCacheInterceptor</span><span class=p>(</span>
     <span class=k>private</span> <span class=k>val</span> <span class=py>context</span><span class=p>:</span> <span class=n>Context</span><span class=p>,</span>
     <span class=k>private</span> <span class=k>val</span> <span class=py>cache</span><span class=p>:</span> <span class=n>LruCache</span><span class=p>&lt;</span><span class=n>String</span><span class=p>,</span> <span class=n>Drawable</span><span class=p>&gt;</span>
 <span class=p>)</span> <span class=p>:</span> <span class=n>Interceptor</span> <span class=p>{</span>
